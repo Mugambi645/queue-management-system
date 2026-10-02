@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from "react"
 import "./App.css"
 import QueueForm from './components/QueueForm';
+import QueueDisplay from './components/QueueDisplay';
 
 
 function App() {
@@ -28,7 +29,10 @@ function App() {
       </header>
       <main>
   <QueueForm onAdd={addToQueue} />
-    <h1>Queue display</h1>
+    <QueueDisplay 
+    queue={queue}
+    onUpdateStatus={updateStatus}
+    onRemove={removeFromQueue} />
       </main>
     </div>
   )
